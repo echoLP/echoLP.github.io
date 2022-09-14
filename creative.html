@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html style="height: 100%;">
    <head>
-      <meta name="viewport"        content="width=device-width, minimum-scale=0.1">
+      <meta name="viewport" content="width=device-width, minimum-scale=0.1">
       <title>Image Preview</title>
    </head>
    <body style="margin: 0px; background: #FFFFFF; height: 100%">
       <!-- <img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;"            src="https://lh3.googleusercontent.com/drive-viewer/AJc5JmTC7RnRpPb-IxrLba-1FIiEO3QsbhoWmOF1i5h7Dn-eS-wcb8S8pe9hL64_qCq3_6RIQtmFhKA=w1920-h937">        <img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;"            src="https://lh3.googleusercontent.com/drive-viewer/AJc5JmTC7RnRpPb-IxrLba-1FIiEO3QsbhoWmOF1i5h7Dn-eS-wcb8S8pe9hL64_qCq3_6RIQtmFhKA=w1920-h937"> -->
-      <img id="primary-image"        style="display: block; margin: auto;"        src="https://lh3.googleusercontent.com/drive-viewer/AJc5JmTC7RnRpPb-IxrLba-1FIiEO3QsbhoWmOF1i5h7Dn-eS-wcb8S8pe9hL64_qCq3_6RIQtmFhKA=w1920-h937">
+      <img id="primary-image"
+           style="display: block; margin: auto;"
+           src="https://lh3.googleusercontent.com/drive-viewer/AJc5JmTC7RnRpPb-IxrLba-1FIiEO3QsbhoWmOF1i5h7Dn-eS-wcb8S8pe9hL64_qCq3_6RIQtmFhKA=w1920-h937">
    </body>
    <script>
    	const queryString = window.location.search;
@@ -14,5 +16,6 @@
    	const urlParams = new URLSearchParams(queryString);
    	const imageUrl = urlParams.get('image')
    	console.log(imageUrl);
+   	document.querySelector("#primary-image").src = imageUrl;
    </script>
 </html>
